@@ -6,7 +6,7 @@ MIC TOOLS
 Convert
 =======
 
-* Reads 2-ID-E and Bio Nano Probe HDF data and converts in a stack of tiff or in a single hdf file formatted as a `tomographic data exchange <https://dxfile.readthedocs.io/en/latest/source/xraytomo.html>`_ that can be directly loaded and reconstructed by tomopy with `rec.py <https://github.com/decarlof/util/tree/master/xrf>`_. XRF data can also be aligned with `align_seq or align_joing <https://tomopy.readthedocs.io/en/latest/api/tomopy.prep.alignment.html#tomopy.prep.alignment.align_joint>_
+* Reads 2-ID-E and Bio Nano Probe HDF data and converts in a stack of tiff or in a single hdf file formatted as a `tomographic data exchange <https://dxfile.readthedocs.io/en/latest/source/xraytomo.html>`_ that can be directly loaded and reconstructed by tomopy with `rec.py <https://github.com/decarlof/util/tree/master/xrf>`_. XRF data can also be aligned with `align_seq or align_joing <https://tomopy.readthedocs.io/en/latest/api/tomopy.prep.alignment.html#tomopy.prep.alignment.align_joint>`_
 * Tested with `2-ID-E data <https://anl.box.com/s/qinted32vyrcnjyt7tzs3cx6kreeud3m>`_
 
 
