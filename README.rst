@@ -47,14 +47,14 @@ Example::
     python convert.py --element Ca --output_fformat hdf mic_data/
 
 Reconstruct XRF data with tomoPy::
-==================================
+================================
 
     python rec.py(*) data.h5
 
 (*)  `rec.py <https://github.com/decarlof/util/tree/master/xrf>`_
 
 Align XRF data with tomoPy::
-============================
+==========================
 
     python align.py(**) data.h5
 
