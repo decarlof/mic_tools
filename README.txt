@@ -5,15 +5,15 @@ The hdf files are tomographic data exchange formatted and directly loadable in t
 
 Example:
 
-    python mic_reader.py mic_data/  (<= full path to the directory containing the datasets)
-    python mic_reader.py --element Ca --output_fformat hdf mic_data/
+    python convert.py mic_data/  (<= full path to the directory containing the datasets)
+    python convert.py --element Ca --output_fformat hdf mic_data/
 
 Help:
     
-    python mic_reader.py -h
+    python convert.py -h
 
 
-Usage: mic_reader.py [-h] [--element [ELEMENT]]
+Usage: convert.py [-h] [--element [ELEMENT]]
                      [--output_fname [OUTPUT_FNAME]]
                      [--output_fformat [OUTPUT_FFORMAT]]
                      [--theta_index [THETA_INDEX]]
