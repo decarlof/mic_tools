@@ -1,6 +1,7 @@
 Reader/Data converter for 2-ID-E and Bio Nano Probe data
 
-Reads 2-ID-E and Bio Nano Probe data and converts in a stack of tiff and in 
+Reads 2-ID-E and Bio Nano Probe data and converts in a stack of tiff or hdf files. 
+The hdf files are tomographic data exchange formatted and directly loadable in tomopy.
 
 Example:
 
