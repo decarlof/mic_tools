@@ -35,7 +35,7 @@ optional arguments::
   -h, --help            show this help message and exit
   --element [ELEMENT]   element selection (default Si)
   --output_fname [OUTPUT_FNAME]
-                        output file path and prefix (default ./tmp/data)
+                        output file path and prefix (default ./data)
   --output_fformat [OUTPUT_FFORMAT]
                         output file format: hdf or tiff (default hdf)
   --theta_index [THETA_INDEX]
