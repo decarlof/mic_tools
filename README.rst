@@ -46,3 +46,8 @@ Example::
 
     python convert.py mic_data/  (<= full path to the directory containing the datasets)
     python convert.py --element Ca --output_fformat hdf mic_data/
+
+Using tomoPy::
+
+    python `rec.py <https://github.com/decarlof/util/tree/master/recon>`_ data.h5
+
