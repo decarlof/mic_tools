@@ -51,20 +51,20 @@ Reconstruct XRF data with tomoPy
 
 ::
 
-    python rec.py(*) data.h5(++)
+    python rec.py(*) data.h5(**)
 
-(*)  `rec.py <https://github.com/decarlof/util/tree/master/xrf>`_
-
-(**) `data.h5 <https://anl.box.com/s/ob67h13ue5meydzq71n8it38wbl6oh2y>`_
 
 Align XRF data with tomoPy
 ==========================
 
 ::
 
-    python align.py(+) data.h5(++)
+    python align.py(***) data.h5(**)
 
-(+) `align.py <https://github.com/decarlof/util/tree/master/xrf>`_
+(*)  `rec.py <https://github.com/decarlof/util/tree/master/xrf>`_
 
-(++) `data.h5 <https://anl.box.com/s/ob67h13ue5meydzq71n8it38wbl6oh2y>`_
+(**) `data.h5 <https://anl.box.com/s/ob67h13ue5meydzq71n8it38wbl6oh2y>`_
+
+(***) `align.py <https://github.com/decarlof/util/tree/master/xrf>`_
+
 
