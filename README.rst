@@ -1,7 +1,16 @@
-Reader/Data converter for 2-ID-E and Bio Nano Probe data
+MIC TOOLS
+#########
 
-Reads 2-ID-E and Bio Nano Probe data and converts in a stack of tiff or hdf files. 
-The hdf files are tomographic data exchange formatted and directly loadable in tomopy.
+**Mic Tools** contains a list of python tools to interface X-ray Fluorescence (XRF) data collected at the Advanced Photon Source 
+Microscopy beamlines 2-ID-E and the Bio Nano Probe with 
+`tomoPy <https://tomopy.readthedocs.io/en/latest/>`_
+
+Convert
+=======
+
+* Reads 2-ID-E and Bio Nano Probe data and converts in a stack of tiff or hdf files. 
+* The hdf files are tomographic data exchange formatted and directly loadable in tomopy with `rec.py <https://github.com/decarlof/util/tree/master/recon>`_
+* Tested with these `2-ID-E data <https://anl.box.com/s/qinted32vyrcnjyt7tzs3cx6kreeud3m>`_
 
 Example:
 
@@ -12,15 +21,11 @@ Help:
     
     python convert.py -h
 
-
 Usage: convert.py [-h] [--element [ELEMENT]]
                      [--output_fname [OUTPUT_FNAME]]
                      [--output_fformat [OUTPUT_FFORMAT]]
                      [--theta_index [THETA_INDEX]]
                      fname
-Testing data:
-    https://anl.box.com/s/qinted32vyrcnjyt7tzs3cx6kreeud3m
-
 
 positional arguments:
   fname                 directory containing multiple datasets or file name of
