@@ -87,9 +87,11 @@ def write_dxfile(fname, proj, theta, element):
     f.add_entry(dx.Entry.experimenter(affiliation={'value': experimenter_affiliation}))
     f.add_entry(dx.Entry.instrument(name={'value': instrument_name}))
     f.add_entry(dx.Entry.sample(name={'value': sample_name}))
-    f.add_entry(dx.Entry.sample(description={'value': element}))
+    # f.add_entry(dx.Entry.sample(description={'value': element}))
 
-    f.add_entry(dx.Entry.data(data={'value': proj, 'units':'counts'}))
+    f.add_entry(dx.Entry.data(data={'value': proj, 'element': element, 'units':'counts'}))
+    # f.add_entry(dx.Entry.data(data={'value': proj, 'units': element+' counts'}))
+    # f.add_entry(dx.Entry.data(docstring={'value': element, }))
     f.add_entry(dx.Entry.data(data_white={'value': flat, 'units':'counts'}))
     f.add_entry(dx.Entry.data(data_dark={'value': dark, 'units':'counts'}))
     f.add_entry(dx.Entry.data(theta={'value': theta, 'units':'degrees'}))
