@@ -101,16 +101,18 @@ def write_dxfile(fname, proj, theta, element):
 def main(arg):
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("fname", help="Directory containing multiple datasets or file name of a single dataset: /data/ or /data/sample.h5")
-    parser.add_argument("--element", nargs='?', type=str, default="Ca", help="Select the element to recontruct (default Si)")
-    parser.add_argument("--output", nargs='?', type=str, default="./tmp/data", help="Output file path and prefix (default ./tmp/data)")
+    parser.add_argument("fname", help="directory containing multiple datasets or file name of a single dataset: /data/ or /data/sample.h5")
+    parser.add_argument("--element", nargs='?', type=str, default="Ca", help="element selection (default Si)")
+    parser.add_argument("--output_fname", nargs='?', type=str, default="./data", help="output file path and prefix (default ./tmp/data)")
+    parser.add_argument("--output_fformat", nargs='?', type=str, default="hdf", help="output file format: hdf or tiff (default hdf)")
     parser.add_argument("--theta_index", nargs='?', type=int, default=657, help="theta_index: 2-ID-E: 663; 2-ID-E prior 2017: 657; BNP 8; (default 657)")
 
     args = parser.parse_args()
 
     fname = args.fname
     element = args.element
-    out = args.output
+    out = args.output_fname
+    fformat = args.output_fformat
     theta_index = args.theta_index
 
     if os.path.isfile(fname):    
@@ -135,8 +137,10 @@ def main(arg):
             proj, theta_image = read_projection(top+fname, element, theta_index) 
             data[i, :, :] = proj
             theta[i] = theta_image
-            dxchange.write_tiff(proj, out+".tiff")
-        write_dxfile(out+".h5", data, theta, element)
+            if fformat == "tiff":
+                dxchange.write_tiff(proj, out+".tiff")
+        if fformat == "hdf":
+            write_dxfile(out+".h5", data, theta, element)
     else:
         print("Directory or File Name does not exist: ", fname)
 
