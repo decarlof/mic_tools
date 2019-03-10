@@ -7,7 +7,7 @@ Convert
 =======
 
 * Reads 2-ID-E and Bio Nano Probe data and converts in a stack of tiff or in a single hdf file
-* The hdf file is `tomographic data exchange <https://dxfile.readthedocs.io/en/latest/source/xraytomo.html>`_ formatted and directly loadable in tomopy with `rec.py <https://github.com/decarlof/util/tree/master/recon>`_
+* The hdf file is `tomographic data exchange <https://dxfile.readthedocs.io/en/latest/source/xraytomo.html>`_ formatted and can be directly loaded and reconstructed by tomopy with `rec.py <https://github.com/decarlof/util/tree/master/recon>`_
 * Tested with `2-ID-E data <https://anl.box.com/s/qinted32vyrcnjyt7tzs3cx6kreeud3m>`_
 
 
