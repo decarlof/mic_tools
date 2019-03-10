@@ -47,7 +47,7 @@ Example::
     python convert.py mic_data/  (<= full path to the directory containing the datasets)
     python convert.py --element Ca --output_fformat hdf mic_data/
 
-Using tomoPy::
+Reconstructing XRF data with tomoPy::
 
     python rec.py(*) data.h5
 
