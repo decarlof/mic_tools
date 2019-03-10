@@ -97,7 +97,6 @@ def write_dxfile(fname, proj, theta, element):
     f.close()
 
 
-# tested on data from https://anl.box.com/s/qinted32vyrcnjyt7tzs3cx6kreeud3m
 def main(arg):
 
     parser = argparse.ArgumentParser()

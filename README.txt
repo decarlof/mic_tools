@@ -18,6 +18,9 @@ Usage: convert.py [-h] [--element [ELEMENT]]
                      [--output_fformat [OUTPUT_FFORMAT]]
                      [--theta_index [THETA_INDEX]]
                      fname
+Testing data:
+    https://anl.box.com/s/qinted32vyrcnjyt7tzs3cx6kreeud3m
+
 
 positional arguments:
   fname                 directory containing multiple datasets or file name of
