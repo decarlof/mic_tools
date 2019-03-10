@@ -37,6 +37,7 @@ positional arguments::
                         a single dataset: /data/ or /data/sample.h5
 
 optional arguments::
+
   -h, --help            show this help message and exit
   --element [ELEMENT]   element selection (default Si)
   --output_fname [OUTPUT_FNAME]
