@@ -49,7 +49,7 @@ Example::
 Reconstruct XRF data with tomoPy
 ================================
 
-::
+use::
     python rec.py(*) data.h5
 
 (*)  `rec.py <https://github.com/decarlof/util/tree/master/xrf>`_
@@ -58,6 +58,7 @@ Align XRF data with tomoPy
 ==========================
 
 ::
+
     python align.py(**) data.h5
 
 (**) `align.py <https://github.com/decarlof/util/tree/master/xrf>`_
