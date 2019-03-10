@@ -49,5 +49,6 @@ Example::
 
 Using tomoPy::
 
-    python `rec.py <https://github.com/decarlof/util/tree/master/recon>`_ data.h5
+    python rec.py(*) data.h5
 
+(*) `rec.py <https://github.com/decarlof/util/tree/master/recon>`_
