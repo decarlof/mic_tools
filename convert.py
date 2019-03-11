@@ -66,10 +66,12 @@ def read_projection(fname, element, theta_index):
     elements = read_elements(fname)
 
     try:
-        find_index(elements, element)
-        return projections[find_index(elements, element),:, :], theta
-    except None:
-        print("ERROR: Element %s does exist in the file: %s " % (element, fname))
+        if find_index(elements, element) != None:
+            return projections[find_index(elements, element),:, :], theta
+        else:
+            raise TypeError
+    except TypeError:
+        print("**** ERROR: Element %s does exist in the file: %s " % (element, fname))
         pass
 
 def write_dxfile(fname, proj, theta, element):
@@ -115,7 +117,6 @@ def main(arg):
 
     if os.path.isfile(fname):    
 
-        elements = read_elements(fname)        
         proj, theta = read_projection(fname, element, theta_index)
         print ("theta:", theta)
         print ("projection shape", proj.shape)
@@ -126,6 +127,9 @@ def main(arg):
 
         h5_file_list = list(filter(lambda x: x.endswith(('.h5', '.hdf')), os.listdir(top)))
 
+        # elements = read_elements(top+h5_file_list[0])
+        # print ("Elements in the files: ", elements)
+
         proj, theta = read_projection(top+h5_file_list[0], element, theta_index) 
         print("\n (element, theta.shape, proj.shape)", element, len(h5_file_list), proj.shape)
         data = zeros([len(h5_file_list), proj.shape[0], proj.shape[1]])
@@ -133,13 +137,12 @@ def main(arg):
 
         for i, fname in enumerate(h5_file_list):
             proj, theta_image = read_projection(top+fname, element, theta_index) 
-            print(i, fname)
             data[i, :, :] = proj
             theta[i] = theta_image
             if fformat == "tiff":
-                dxchange.write_tiff(proj, out+".tiff")
+                dxchange.write_tiff(proj, out + "_" + element + ".tiff")
         if fformat == "hdf":
-            write_dxfile(out+".h5", data, theta, element)
+            write_dxfile(out + "_" + element + ".h5", data, theta, element)
     else:
         print("Directory or File Name does not exist: ", fname)
 
