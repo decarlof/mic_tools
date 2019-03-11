@@ -51,7 +51,12 @@ Reconstruct XRF data with tomoPy
 
 ::
 
-    python rec.py(*) data.h5(**)
+    python rec.py(*) data.h5(**
+    python rec.py --axis 90.5 data.h5
+
+.. image:: docs/source/img/recon.png
+   :width: 320px
+   :alt: project
 
 
 Align XRF data with tomoPy
