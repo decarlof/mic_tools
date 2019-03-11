@@ -77,7 +77,7 @@ def write_dxfile(fname, proj, theta, element):
     instrument_name="2-ID-E XRF"  
     sample_name = "test data set"
 
-    flat = ones([1, proj.shape[1], proj.shape[2]])
+    flat = ones([1, proj.shape[1], proj.shape[2]]) * np.nanmax(proj)
     dark = zeros([1, proj.shape[1], proj.shape[2]])
 
     # Open DataExchange file
@@ -87,11 +87,8 @@ def write_dxfile(fname, proj, theta, element):
     f.add_entry(dx.Entry.experimenter(affiliation={'value': experimenter_affiliation}))
     f.add_entry(dx.Entry.instrument(name={'value': instrument_name}))
     f.add_entry(dx.Entry.sample(name={'value': sample_name}))
-    # f.add_entry(dx.Entry.sample(description={'value': element}))
 
     f.add_entry(dx.Entry.data(data={'value': proj, 'element': element, 'units':'counts'}))
-    # f.add_entry(dx.Entry.data(data={'value': proj, 'units': element+' counts'}))
-    # f.add_entry(dx.Entry.data(docstring={'value': element, }))
     f.add_entry(dx.Entry.data(data_white={'value': flat, 'units':'counts'}))
     f.add_entry(dx.Entry.data(data_dark={'value': dark, 'units':'counts'}))
     f.add_entry(dx.Entry.data(theta={'value': theta, 'units':'degrees'}))
@@ -136,6 +133,7 @@ def main(arg):
 
         for i, fname in enumerate(h5_file_list):
             proj, theta_image = read_projection(top+fname, element, theta_index) 
+            print(i, fname)
             data[i, :, :] = proj
             theta[i] = theta_image
             if fformat == "tiff":
