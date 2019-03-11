@@ -72,7 +72,7 @@ def read_projection(fname, element, theta_index):
             raise TypeError
     except TypeError:
         print("**** ERROR: Element %s does exist in the file: %s " % (element, fname))
-        pass
+        return None
 
 def write_dxfile(fname, proj, theta, element):
     experimenter_affiliation="Argonne National Laboratory" 
