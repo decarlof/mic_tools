@@ -85,8 +85,5 @@ The aligned projections generate the following reconstructed slice:
    :width: 320px
    :alt: project
 
-(**) `data.h5 <https://anl.box.com/s/ob67h13ue5meydzq71n8it38wbl6oh2y>`_
-
-(***) `align.py <https://github.com/decarlof/util/tree/master/xrf>`_
 
 
