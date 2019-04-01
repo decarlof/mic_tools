@@ -8,6 +8,8 @@ Convert
 
 * Reads 2-ID-E and Bio Nano Probe HDF data and convert them is a single hdf file containing:
 
+::
+
 /exchange/data[element, theta, y, x]
 /exchange/element[]
 /exchange/theta[]
