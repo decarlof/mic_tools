@@ -14,9 +14,6 @@ Convert
 /exchange/element[]
 /exchange/theta[]
 
-as a `tomographic data exchange <https://dxfile.readthedocs.io/en/latest/source/xraytomo.html>`_ that can be directly loaded and reconstructed by tomopy with `rec.py <https://github.com/decarlof/util/tree/master/xrf>`_. XRF data can also be aligned with `align_seq or align_joint <https://tomopy.readthedocs.io/en/latest/api/tomopy.prep.alignment.html#>`_
-* Tested with `2-ID-E data <https://anl.box.com/s/qinted32vyrcnjyt7tzs3cx6kreeud3m>`_
-
 
 Help::
     
@@ -45,7 +42,7 @@ optional arguments::
 
 Example::
 
-    python convert.py mic_data/  (<= full path to the directory containing the datasets)
+    python convert.py mic_data/  (<= full path to the directory containing the datasets, e.g `2-ID-E data <https://anl.box.com/s/qinted32vyrcnjyt7tzs3cx6kreeud3m>`_)
 
 
 
