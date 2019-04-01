@@ -29,7 +29,7 @@ Usage::
 
 positional arguments::
 
-  dname                 directory containing multiple datasets: /data/
+  dname                 directory containing multiple mic XRF datasets: /data/
 
 optional arguments::
 
@@ -42,8 +42,9 @@ optional arguments::
 
 Example::
 
-    python convert.py mic_data/  (<= full path to the directory containing the datasets, e.g `2-ID-E data <https://anl.box.com/s/qinted32vyrcnjyt7tzs3cx6kreeud3m>`_)
+    python convert.py mic_data/  (<= full path to the directory containing the datasets, e.g (*))
 
+(*) `2-ID-E data <https://anl.box.com/s/qinted32vyrcnjyt7tzs3cx6kreeud3m>`_
 
 
 Align and reconstruct XRF data with tomoPy
