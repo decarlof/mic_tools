@@ -27,7 +27,7 @@ def main(arg):
         # Add a trailing slash if missing
         top = os.path.join(fname, '')
 
-        elements, ang, data = dxr.read_dx_xrf(fname)
+        data, theta, elements = dxr.read_dx_xrf(fname)
         print ("Elements: ", elements)
 
         prj = np.sum(data, axis = 0)
@@ -42,9 +42,7 @@ def main(arg):
         prj = tomopy.remove_neg(prj, val=0.0)
         prj[np.where(prj == np.inf)] = 0.0
         
-        print (prj.min(), prj.max())
-
-        prj, sx, sy, conv = tomopy.align_joint(prj, ang, iters=iters, pad=(0, 0),
+        prj, sx, sy, conv = tomopy.align_joint(prj, theta, iters=iters, pad=(0, 0),
                             blur=True, rin=0.8, rout=0.95, center=None,
                             algorithm='pml_hybrid',
                             upsample_factor=100,

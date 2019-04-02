@@ -69,7 +69,7 @@ Usage::
 
 positional arguments::
 
-  dfname            file name of xrf dxchange file: ./data.h5
+  fname            file name of xrf dxchange file: ./data.h5
 
 optional arguments::
 

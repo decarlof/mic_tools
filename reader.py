@@ -164,7 +164,7 @@ def read_dx_xrf(fname):
     elements = []
     for i, e in enumerate(b_elements):
         elements.append(e.decode('utf-8'))
-    ang = dxchange.read_hdf5(fname, dataset='/exchange/theta').astype('float32').copy()
-    ang *= np.pi / 180.
+    theta = dxchange.read_hdf5(fname, dataset='/exchange/theta').astype('float32').copy()
+    theta *= np.pi / 180.
 
-    return elements, ang, data
+    return data, theta, elements

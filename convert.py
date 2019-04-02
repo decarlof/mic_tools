@@ -37,6 +37,7 @@ def main(arg):
     if os.path.isdir(dname):
         data, theta, elements = dxr.read_mic_xrf(dname, theta_index)
         dxw.write_dxfile(out + ".h5", data, theta, elements)
+        print("Created the xrf dxfile: ", out + ".h5")
     else:
         print("Directory does not exist: ", dname)
 
